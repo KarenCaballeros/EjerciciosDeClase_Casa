@@ -5,8 +5,9 @@ class Triangulo(FiguraGeometrica):
 		super(). __init__(base, altura)
 	def imprimir(self):
 		resultado= ""
-		for i in range(self.altura):
-			resultado += "*" * (i + 1.0) + "\n"
+		for i in range(1, self.altura + 1):
+			esp= self.altura-i
+			resultado += ("  "* esp, "*" * i) + "\n"			
 		return resultado
 	def calcular(self):
 		return super().calcular_area() / 2.0	
