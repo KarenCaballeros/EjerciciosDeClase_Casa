@@ -4,10 +4,12 @@ class Triangulo(FiguraGeometrica):
 	def __init__(self, base, altura):
 		super(). __init__(base, altura)
 	def imprimir(self):
-		resultado= ""
-		for i in range(1, self.altura + 1):
-			esp= self.altura-i
-			resultado += ("  "* esp, "*" * i) + "\n"			
-		return resultado
+		cont = self.altura
+		resultado = ""
+		while cont > 0:
+			for i in range(0, self.altura):
+				resultado += (" "*(self.altura-i-1) + "* " * (i+1) + "\n")
+				cont = cont - 1
+		return resultado	
 	def calcular(self):
 		return super().calcular_area() / 2.0	
