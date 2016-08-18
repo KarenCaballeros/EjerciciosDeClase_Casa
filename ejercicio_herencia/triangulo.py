@@ -11,5 +11,5 @@ class Triangulo(FiguraGeometrica):
 				resultado += (" "*(self.altura-i-1) + "* " * (i+1) + "\n")
 				cont = cont - 1
 		return resultado	
-	def calcular(self):
+	def calcular_area(self):
 		return super().calcular_area() / 2.0	
